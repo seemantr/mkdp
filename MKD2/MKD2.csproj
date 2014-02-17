@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{169B7279-FF2A-4F69-BB18-052ABD17B49D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKD2</RootNamespace>
+    <AssemblyName>MKD2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MarkDownPad2\App.cs" />
+    <Compile Include="MarkDownPad2\Converters\ColorToBrushConverter.cs" />
+    <Compile Include="MarkDownPad2\Converters\InverseBooleanConverter.cs" />
+    <Compile Include="MarkDownPad2\Core\AboutWindow.cs" />
+    <Compile Include="MarkDownPad2\Core\BugReportHelper.cs" />
+    <Compile Include="MarkDownPad2\Core\FileDialogHelper.cs" />
+    <Compile Include="MarkDownPad2\Core\FileExtensions.cs" />
+    <Compile Include="MarkDownPad2\Core\FileModificationType.cs" />
+    <Compile Include="MarkDownPad2\Core\FileUtils.cs" />
+    <Compile Include="MarkDownPad2\Core\HeadingType.cs" />
+    <Compile Include="MarkDownPad2\Core\ISingleInstanceApp.cs" />
+    <Compile Include="MarkDownPad2\Core\MarkdownPadCommands.cs" />
+    <Compile Include="MarkDownPad2\Core\MessageBoxHelper.cs" />
+    <Compile Include="MarkDownPad2\Core\NativeMethods.cs" />
+    <Compile Include="MarkDownPad2\Core\SingleInstance.cs" />
+    <Compile Include="MarkDownPad2\Core\Stats.cs" />
+    <Compile Include="MarkDownPad2\Core\Urls.cs" />
+    <Compile Include="MarkDownPad2\Core\WelcomeDocument.cs" />
+    <Compile Include="MarkDownPad2\Core\WM.cs" />
+    <Compile Include="MarkDownPad2\EditorResources\AutoContinueLists.cs" />
+    <Compile Include="MarkDownPad2\EditorResources\EditorPreviewKeyDownEvent.cs" />
+    <Compile Include="MarkDownPad2\Editor\EditorExtensions.cs" />
+    <Compile Include="MarkDownPad2\Export\PdfExporter.cs" />
+    <Compile Include="MarkDownPad2\i18n\LocalizationProvider.cs" />
+    <Compile Include="MarkDownPad2\i18n\MarkdownPadStrings.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurData.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurErrorData.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurErrorResponse.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurLinkCreated.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurLinkCreatedEventArgs.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurResponse.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurUpload.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurUploadError.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\ImgurUploadErrorEventArgs.cs" />
+    <Compile Include="MarkDownPad2\ImageUploader\MashapeErrorResponse.cs" />
+    <Compile Include="MarkDownPad2\IMarkdownProcessor.cs" />
+    <Compile Include="MarkDownPad2\Licensing\License.cs" />
+    <Compile Include="MarkDownPad2\Licensing\LicenseEngine.cs" />
+    <Compile Include="MarkDownPad2\Licensing\LicenseHelper.cs" />
+    <Compile Include="MarkDownPad2\Licensing\LicenseWindow.cs" />
+    <Compile Include="MarkDownPad2\Licensing\UpgradeProWindow.cs" />
+    <Compile Include="MarkDownPad2\Markdown\GitHubException.cs" />
+    <Compile Include="MarkDownPad2\Markdown\GitHubFlavoredMarkdownOffline.cs" />
+    <Compile Include="MarkDownPad2\Markdown\GitHubFlavoredMarkdownProcessor.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownClassicProcessor.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownExtraProcessor.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownProcessor.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownProcessorProvider.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownProcessorType.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownSyntax.cs" />
+    <Compile Include="MarkDownPad2\Markdown\MarkdownSyntaxProvider.cs" />
+    <Compile Include="MarkDownPad2\Markdown\UnorderedListStyle.cs" />
+    <Compile Include="MarkDownPad2\Network\ProxyProvider.cs" />
+    <Compile Include="MarkDownPad2\Network\ProxyType.cs" />
+    <Compile Include="MarkDownPad2\Options\OptionsWindow.cs" />
+    <Compile Include="MarkDownPad2\Properties\Resources.cs" />
+    <Compile Include="MarkDownPad2\Properties\Settings.cs" />
+    <Compile Include="MarkDownPad2\RendererContent\WebResources.cs" />
+    <Compile Include="MarkDownPad2\Rest\RestResponseException.cs" />
+    <Compile Include="MarkDownPad2\Rest\RestUtils.cs" />
+    <Compile Include="MarkDownPad2\SessionManager\Session.cs" />
+    <Compile Include="MarkDownPad2\SessionManager\SessionCollection.cs" />
+    <Compile Include="MarkDownPad2\Settings\SettingsProvider.cs" />
+    <Compile Include="MarkDownPad2\SpellCheck\SpellCheckBackgroundRenderer.cs" />
+    <Compile Include="MarkDownPad2\SpellCheck\SpellCheckProvider.cs" />
+    <Compile Include="MarkDownPad2\SpellCheck\SpellingService.cs" />
+    <Compile Include="MarkDownPad2\Stylesheets\StyleSheetProvider.cs" />
+    <Compile Include="MarkDownPad2\UI\CodeEditor.cs" />
+    <Compile Include="MarkDownPad2\UI\ColumnGuideWindow.cs" />
+    <Compile Include="MarkDownPad2\UI\EnumerationExtension.cs" />
+    <Compile Include="MarkDownPad2\UI\GoToLine.cs" />
+    <Compile Include="MarkDownPad2\UI\MainWindow.cs" />
+    <Compile Include="MarkDownPad2\UI\ModalDialog.cs" />
+    <Compile Include="MarkDownPad2\UI\MoveTabWindow.cs" />
+    <Compile Include="MarkDownPad2\Updater\UpdateFrequency.cs" />
+    <Compile Include="MarkDownPad2\Updater\UpdateProvider.cs" />
+    <Compile Include="MarkDownPad2\UserControls\DragAndDrop.cs" />
+    <Compile Include="MarkDownPad2\UserControls\EditorRenderer.cs" />
+    <Compile Include="MarkDownPad2\UserControls\HtmlTemplate.cs" />
+    <Compile Include="MarkDownPad2\UserControls\MarkdownEditor.cs" />
+    <Compile Include="MarkDownPad2\UserControls\ScrollableTabPanel.cs" />
+    <Compile Include="MarkDownPad2\UserControls\TabbedDocumentInterface.cs" />
+    <Compile Include="MarkDownPad2\UserControls\Toolbar.cs" />
+    <Compile Include="MarkDownPad2\Utilities\AssemblyUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\DrawingUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\EditorUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\HttpUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\NetworkUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\NumericUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\ProcessUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\StringUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\SystemUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\VisualUtilities.cs" />
+    <Compile Include="MarkDownPad2\Utilities\XmlUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MarkdownPad2.Core.Urls.resources" />
+    <EmbeddedResource Include="MarkdownPad2.g.resources" />
+    <EmbeddedResource Include="MarkdownPad2.i18n.MarkdownPadStrings.resources" />
+    <EmbeddedResource Include="MarkdownPad2.Markdown.MarkdownSyntax.resources" />
+    <EmbeddedResource Include="MarkdownPad2.Properties.Resources.resources" />
+    <EmbeddedResource Include="MarkdownPad2.RendererContent.WebResources.resources" />
+    <EmbeddedResource Include="MarkDownPad2\Core\Urls.resources" />
+    <EmbeddedResource Include="MarkDownPad2\i18n\MarkdownPadStrings.resources" />
+    <EmbeddedResource Include="MarkDownPad2\Markdown\MarkdownSyntax.resources" />
+    <EmbeddedResource Include="MarkDownPad2\Properties\Resources.resources" />
+    <EmbeddedResource Include="MarkDownPad2\RendererContent\WebResources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="MarkdownPad2.SyntaxRules.css.xshd" />
+    <None Include="MarkdownPad2.SyntaxRules.markdown.xshd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MarkdownPad2.Stylesheets.markdown.css" />
+    <Content Include="MarkdownPad2.Stylesheets.markdownpad-github.css" />
+    <Content Include="MarkdownPad2.Stylesheets.none.css" />
+    <Content Include="MarkdownPad2.Stylesheets.solarized-dark.css" />
+    <Content Include="MarkdownPad2.Stylesheets.solarized-light.css" />
+    <Content Include="MarkDownPad2\Stylesheets\markdown.css" />
+    <Content Include="MarkDownPad2\Stylesheets\markdownpad-github.css" />
+    <Content Include="MarkDownPad2\Stylesheets\none.css" />
+    <Content Include="MarkDownPad2\Stylesheets\solarized-dark.css" />
+    <Content Include="MarkDownPad2\Stylesheets\solarized-light.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="XamlGeneratedNamespace\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
