@@ -8,5 +8,7 @@ namespace MarkdownPad2.Markdown
 		GithubFlavoredMarkdown,
 		MarkdownClassic,
 		GitHubFlavoredMarkdownOffline
+
+
 	}
 }
