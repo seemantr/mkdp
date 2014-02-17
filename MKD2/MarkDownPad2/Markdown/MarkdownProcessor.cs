@@ -89,7 +89,7 @@ namespace MarkdownPad2.Markdown
 		}
 		public override bool Equals(object obj)
 		{
-			return obj.GetType() == base.GetType();
+			return obj.GetType() == base.GetType();//返回对象类型
 		}
 	}
 }
